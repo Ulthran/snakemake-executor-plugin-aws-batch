@@ -31,13 +31,11 @@ class ExecutorSettings(ExecutorSettingsBase):
     access_key_id: Optional[int] = field(
         default=None,
         metadata={"help": "AWS access key id", "env_var": True, "required": False},
-        help="",
         repr=False,
     )
     access_key: Optional[int] = field(
         default=None,
         metadata={"help": "AWS access key", "env_var": True, "required": False},
-        help="",
         repr=False,
     )
     region: Optional[int] = field(
@@ -47,7 +45,6 @@ class ExecutorSettings(ExecutorSettingsBase):
             "env_var": False,
             "required": True,
         },
-        help="",
     )
     fsap_id: Optional[str] = (
         field(
@@ -60,7 +57,6 @@ class ExecutorSettings(ExecutorSettingsBase):
                 "env_var": False,
                 "required": False,
             },
-            help="",
         ),
     )
     efs_project_path: Optional[str] = (
@@ -71,7 +67,6 @@ class ExecutorSettings(ExecutorSettingsBase):
                 "env_var": False,
                 "required": False,
             },
-            help="",
         ),
     )
     job_queue: Optional[str] = field(
@@ -81,7 +76,6 @@ class ExecutorSettings(ExecutorSettingsBase):
             "env_var": True,
             "required": True,
         },
-        help="",
     )
     execution_role: Optional[str] = field(
         default=None,
@@ -90,7 +84,6 @@ class ExecutorSettings(ExecutorSettingsBase):
             "env_var": True,
             "required": True,
         },
-        help="",
     )
     tags: Optional[dict] = field(
         default=None,
@@ -102,7 +95,6 @@ class ExecutorSettings(ExecutorSettingsBase):
             "env_var": False,
             "required": False,
         },
-        help="",
     )
     task_timeout: Optional[int] = field(
         default=None,
@@ -112,7 +104,6 @@ class ExecutorSettings(ExecutorSettingsBase):
                 "a Batch task if it fails to finish within the timeout, minimum 60"
             )
         },
-        help="",
     )
 
 
