@@ -28,17 +28,17 @@ from snakemake_interface_common.exceptions import WorkflowError
 # of None or anything else that makes sense in your case.
 @dataclass
 class ExecutorSettings(ExecutorSettingsBase):
-    access_key_id: Optional[int] = field(
+    access_key_id: Optional[str] = field(
         default=None,
         metadata={"help": "AWS access key id", "env_var": True, "required": False},
         repr=False,
     )
-    access_key: Optional[int] = field(
+    access_key: Optional[str] = field(
         default=None,
         metadata={"help": "AWS access key", "env_var": True, "required": False},
         repr=False,
     )
-    region: Optional[int] = field(
+    region: Optional[str] = field(
         default=None,
         metadata={
             "help": "AWS Region",
