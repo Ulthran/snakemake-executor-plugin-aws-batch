@@ -46,29 +46,6 @@ class ExecutorSettings(ExecutorSettingsBase):
             "required": True,
         },
     )
-    fsap_id: Optional[str] = (
-        field(
-            default=None,
-            metadata={
-                "help": (
-                    "The fsap id of the EFS instance you want to use that "
-                    "is shared with your local environment"
-                ),
-                "env_var": False,
-                "required": False,
-            },
-        ),
-    )
-    efs_project_path: Optional[str] = (
-        field(
-            default=None,
-            metadata={
-                "help": "The EFS path that contains the project Snakemake is running",
-                "env_var": False,
-                "required": False,
-            },
-        ),
-    )
     job_queue: Optional[str] = field(
         default=None,
         metadata={
